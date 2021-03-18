@@ -1,7 +1,7 @@
 <div class="container mt-15">
     <div class="row justify-content-center p-4">
         <div class="col-md-6">
-            <form #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
+            <form #registrationForm="ngForm" (ngSubmit)="register()">
             <h2>User Registration</h2>
             <div class="form-group p-2">
                 <input type="text" name="username" class="form-control" [(ngModel)]="username" placeholder="User Name" required>
@@ -16,7 +16,18 @@
                 <button type="submit" class="btn btn-primary">Register</button>
                 <div class="register"><a routerLink='/login'>Back to User Loin</a></div>
             </div>  
-        </form>          
+        </form> 
+        <div class="form-group">
+            <p *ngIf='errorMessage.length>0' class="text-danger">
+                {{errorMessage}}
+            </p>
+            <p *ngIf='error.message.length>0' class="text-danger">
+                {{error.message}}
+            </p>
+            <p *ngIf='message.length>0' class="text-info">
+                {{message}}
+            </p>
+        </div>         
         </div>
     </div>
 </div>

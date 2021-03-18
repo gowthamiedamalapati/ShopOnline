@@ -1,0 +1,8 @@
+.card{
+    width: 320px;
+    justify-self: center;
+    margin: 50px;
+}
+.button button{
+    width: 300px;
+}

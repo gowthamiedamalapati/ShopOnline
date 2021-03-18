@@ -3,18 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    HomeComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { RegisterComponent } from './register/register.component';
     }),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     FormsModule
   ],
   providers: [],
